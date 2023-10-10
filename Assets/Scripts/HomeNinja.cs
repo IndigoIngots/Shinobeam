@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HomeNinja : MonoBehaviour
+{
+    [SerializeField] Animator animator;
+
+    private void Start()
+    {
+        //DelayMethodÇ3.5ïbå„Ç…åƒÇ—èoÇµÅAà»ç~ÇÕÇPïbñàÇ…é¿çs
+        InvokeRepeating(nameof(DelayMethod), 10f, 10f);
+    }
+
+    void DelayMethod()
+    {
+        animator.SetTrigger("idle");
+    }
+}
